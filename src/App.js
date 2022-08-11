@@ -1,11 +1,13 @@
 // import logo from './logo.svg';
 import './App.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Vendors from './Vendors';
 import Form from './Form';
 
 const App = () => {
-  
+
+  const [vendors, setVendors] = useState([]);
+
   useEffect(() => {
     fetch("http://localhost:9292/vendors")
     .then((r) => r.json())
