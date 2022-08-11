@@ -1,5 +1,5 @@
 // import logo from './logo.svg';
-// import './App.css';
+import './App.css';
 import { useEffect } from 'react';
 import Vendors from './Vendors';
 import Form from './Form';
@@ -14,7 +14,9 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>Welcome to Phase 3 Project</h1>
+      <h1>Welcome to Night Market</h1>
+      <Vendors/>
+      <Form/>
     </div>
   );
 }
