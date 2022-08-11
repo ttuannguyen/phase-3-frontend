@@ -13,7 +13,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>Phase 3 Project</h1>
+      <h1>Welcome to Phase 3 Project</h1>
     </div>
   );
 }
