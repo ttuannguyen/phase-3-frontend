@@ -1,19 +1,15 @@
 import React, { useState } from 'react'
 
-const Form = () => {
+const Form = ({handleSubmit}) => {
     const [vendorName, setVendorName] = useState("");
     const [boothNumber, setBoothNumber] = useState("");
     const [comment, setComment] = useState("");
     const [cuisineId, setCuisineId] = useState("");
 
-    const handleSubmit = (e) => {
-        console.log(e.target.value)
-    }
-
     return (
         <div>
             <h3>Vendor Form</h3>
-            <form>
+            <form onSubmit={e => handleSubmit(e, vendorName, boothNumber, comment, cuisineId)}>
                 <label>Vendor Name: </label>
                 <input 
                     type="text" 
@@ -28,13 +24,6 @@ const Form = () => {
                     value={boothNumber}
                     onChange={e => setBoothNumber(e.target.value)}
                 /><br/>
-                <label>Comment: </label>
-                <input 
-                    type="text" 
-                    name="comment" 
-                    value={comment}
-                    onChange={e => setComment(e.target.value)}
-                /><br/>
                 <label>Cuisine ID: </label>
                 <input 
                     type="text" 
@@ -42,7 +31,14 @@ const Form = () => {
                     value={cuisineId}
                     onChange={e => setCuisineId(e.target.value)}
                 /><br/>
-                <button type="submit" onSubmit={handleSubmit}>Add Vendor</button>
+                <label>Comment: </label>
+                <input 
+                    type="text" 
+                    name="comment" 
+                    value={comment}
+                    onChange={e => setComment(e.target.value)}
+                /><br/>
+                <button type="submit">Add Vendor</button>
             </form>
         </div>
     )

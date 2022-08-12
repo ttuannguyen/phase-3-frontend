@@ -9,8 +9,9 @@ const App = () => {
 
   const [vendors, setVendors] = useState([]);
 
-  const handleSubmit = () => {
-    console.log("submit")
+  const handleSubmit = (e, vendorName, boothNumber, comment, cuisineId) => {
+    e.preventDefault()
+    console.log(vendorName)
   }
 
   useEffect(() => {
