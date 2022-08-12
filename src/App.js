@@ -9,9 +9,8 @@ const App = () => {
 
   const [vendors, setVendors] = useState([]);
 
-  const handleSubmit = (e, vendorName, boothNumber, comment, cuisineId) => {
-    e.preventDefault()
-    console.log(vendorName)
+  const addVendor = () => {
+    console.log("this has been sent up")
   }
 
   useEffect(() => {
@@ -24,7 +23,7 @@ const App = () => {
     <div className="App">
       <h1>Welcome to Night Market</h1>
       <Vendors vendors={vendors}/>
-      <Form handleSubmit={handleSubmit}/>
+      <Form addVendor={addVendor}/>
       
     </div>
   );
