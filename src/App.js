@@ -2,6 +2,7 @@
 import './App.css';
 import { useEffect, useState } from 'react';
 import Vendors from './Vendors';
+import Vendor from './Vendor';
 import Form from './Form';
 
 const App = () => {
@@ -11,16 +12,19 @@ const App = () => {
   useEffect(() => {
     fetch("http://localhost:9292/vendors")
     .then((r) => r.json())
-    .then((data) => console.log(data));
+    .then((data) => setVendors(data));
   }, [])
 
   return (
     <div className="App">
       <h1>Welcome to Night Market</h1>
-      <Vendors/>
+      <Vendors vendors={vendors}/>
       <Form/>
+      
     </div>
   );
 }
 
 export default App;
+
+
