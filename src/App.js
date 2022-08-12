@@ -9,6 +9,10 @@ const App = () => {
 
   const [vendors, setVendors] = useState([]);
 
+  const handleSubmit = () => {
+    console.log("submit")
+  }
+
   useEffect(() => {
     fetch("http://localhost:9292/vendors")
     .then((r) => r.json())
@@ -19,7 +23,7 @@ const App = () => {
     <div className="App">
       <h1>Welcome to Night Market</h1>
       <Vendors vendors={vendors}/>
-      <Form/>
+      <Form handleSubmit={handleSubmit}/>
       
     </div>
   );
