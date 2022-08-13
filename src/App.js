@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import { useEffect, useState } from 'react';
+import Cuisines from './Cuisines';
 import Vendors from './Vendors';
 import Vendor from './Vendor';
 import Form from './Form';
@@ -11,11 +12,19 @@ const App = () => {
 
   useEffect(() => {
     fetch("http://localhost:9292/vendors")
-    .then((r) => r.json())
-    .then((data) => setVendors(data));
+    .then(res => res.json())
+    .then(data => {
+      setVendors(data)
+    })
+    // fetch("http://localhost:9292/cuisines")
+    // .then(res => res.json())
+    // .then(json => {
+    //   console.log(json)
+    // })
   }, [])
 
   const addVendor = (newVendor) => {
+    // console.log(newVendor)
     setVendors(vendors => [...vendors, newVendor])
   }
 
