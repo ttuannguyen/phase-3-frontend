@@ -9,15 +9,15 @@ const App = () => {
 
   const [vendors, setVendors] = useState([]);
 
-  const addVendor = () => {
-    console.log("this has been sent up")
-  }
-
   useEffect(() => {
     fetch("http://localhost:9292/vendors")
     .then((r) => r.json())
     .then((data) => setVendors(data));
   }, [])
+
+  const addVendor = (newVendor) => {
+    setVendors(vendors => [...vendors, newVendor])
+  }
 
   return (
     <div className="App">
