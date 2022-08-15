@@ -29,8 +29,14 @@ const App = () => {
     setVendors(vendors => [...vendors, newVendor])
   }
 
-  const deleteVendor = () => {
-    console.log("delete")
+  const deleteVendor = (id) => {
+    fetch(`http://localhost:9292/vendors/${id}`, {
+      method: 'DELETE',
+    })
+    .then(res => res.json())
+    .then(deleteVendor => {
+      setVendors(vendors.filter(vendor => vendor.id !== deleteVendor.id))
+    })
   }
 
   return (
