@@ -9,6 +9,7 @@ import Form from './Form';
 const App = () => {
 
   const [vendors, setVendors] = useState([]);
+  const [cuisines, setCuisines] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:9292/vendors")
@@ -31,8 +32,9 @@ const App = () => {
   return (
     <div className="App">
       <h1>Welcome to Night Market</h1>
-      <Vendors vendors={vendors}/>
-      <Form addVendor={addVendor}/>
+      <Cuisines cuisines={cuisines} />
+      <Vendors vendors={vendors} />
+      <Form addVendor={addVendor} />
       
     </div>
   );
