@@ -29,11 +29,15 @@ const App = () => {
     setVendors(vendors => [...vendors, newVendor])
   }
 
+  const deleteVendor = () => {
+    console.log("delete")
+  }
+
   return (
     <div className="App">
       <h1>Welcome to Night Market</h1>
       <Cuisines cuisines={cuisines} />
-      <Vendors vendors={vendors} />
+      <Vendors vendors={vendors} deleteVendor={deleteVendor} />
       <Form addVendor={addVendor} />
       
     </div>

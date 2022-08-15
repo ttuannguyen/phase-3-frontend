@@ -3,7 +3,9 @@ import React from 'react'
 const Cuisine = ({ cuisine }) => {
   return (
     <div>
-      {cuisine.name}
+      <h3>
+        {cuisine.name}
+      </h3>
     </div>
   )
 }

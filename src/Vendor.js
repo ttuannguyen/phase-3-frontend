@@ -1,13 +1,14 @@
 import React from 'react'
 
-const Vendor = ({vendor}) => {
-    console.log(vendor)
+const Vendor = ({vendor, deleteVendor}) => {
+    // console.log(vendor)
     return (
         <div>
-            <h2>{vendor.name}</h2>
-            <h3>Booth # {vendor.booth_number}</h3>
-            <h3>Cuisine ID: {vendor.cuisine_id}</h3>
-            <h3>Comment: {vendor.comment}</h3>
+            <h3>{vendor.name}</h3>
+            <h4>Booth # {vendor.booth_number}</h4>
+            <h4>Cuisine ID: {vendor.cuisine_id}</h4>
+            <h4>Comment: {vendor.comment}</h4>
+            <button  onClick={() => deleteVendor()}>Delete</button>
         </div>
     )
 }
