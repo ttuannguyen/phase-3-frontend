@@ -17,11 +17,11 @@ const App = () => {
     .then(data => {
       setVendors(data)
     })
-    // fetch("http://localhost:9292/cuisines")
-    // .then(res => res.json())
-    // .then(json => {
-    //   console.log(json)
-    // })
+    fetch("http://localhost:9292/cuisines")
+    .then(res => res.json())
+    .then(data => {
+      setCuisines(data)
+    })
   }, [])
 
   const addVendor = (newVendor) => {
