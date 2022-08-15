@@ -1,8 +1,10 @@
 import React from 'react'
 
-const Cuisine = () => {
+const Cuisine = ({ cuisine }) => {
   return (
-    <div>Cuisine</div>
+    <div>
+      {cuisine.name}
+    </div>
   )
 }
 

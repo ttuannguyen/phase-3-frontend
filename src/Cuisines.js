@@ -1,9 +1,12 @@
 import React from 'react'
+import Cuisine from './Cuisine'
 
 const Cuisines = ({ cuisines }) => {
-  return (
+    const allCuisines = cuisines.map(cuisine => <Cuisine cuisine={cuisine} /> )
+    return (
     <div>
-        Cuisines
+        <h2>Cuisines</h2>
+        {allCuisines}
     </div>
   )
 }
