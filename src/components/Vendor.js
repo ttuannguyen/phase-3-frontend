@@ -9,6 +9,7 @@ const Vendor = ({vendor, deleteVendor}) => {
             <h4>Cuisine ID: {vendor.cuisine_id}</h4>
             <h4>Comment: {vendor.comment}</h4>
             <button onClick={() => deleteVendor(vendor.id)}>Delete</button>
+            <button>Edit Comment</button>
         </div>
     )
 }

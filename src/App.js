@@ -1,10 +1,12 @@
 // import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from 'react';
-import Cuisines from './Cuisines';
-import Vendors from './Vendors';
-import Vendor from './Vendor';
-import Form from './Form';
+import NavBar from './components/NavBar';
+import Cuisines from './components/Cuisines';
+import Vendors from './components/Vendors';
+import Vendor from './components/Vendor';
+import Form from './components/Form';
 
 const App = () => {
 
