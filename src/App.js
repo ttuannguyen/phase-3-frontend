@@ -42,13 +42,16 @@ const App = () => {
   }
 
   return (
-    <div className="App">
+    <Router>
       <h1>Welcome to Night Market</h1>
-      <Cuisines cuisines={cuisines} />
-      <Vendors vendors={vendors} deleteVendor={deleteVendor} />
-      <Form addVendor={addVendor} />
+      <NavBar />
+      <Routes>
+        <Route exact path="/vendors/new" element={ <Form addVendor={addVendor} />}/>
+        <Route exact path="/vendors" element={ <Vendors vendors={vendors} deleteVendor={deleteVendor} />} />
+        <Route exact path="/cuisines" element={ <Cuisines cuisines={cuisines} />} />
+      </Routes>
+    </Router>
       
-    </div>
   );
 }
 
