@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Form = ({addVendor}) => {
+const Form = ({ addVendor }) => {
 
     const url = "http://localhost:9292/vendors";
     

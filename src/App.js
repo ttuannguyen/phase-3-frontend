@@ -8,7 +8,8 @@ import Vendors from './components/Vendors';
 import Vendor from './components/Vendor';
 import Form from './components/Form';
 import Home from './components/Home';
-import EditComment from './components/EditComment';
+import EditVendor from './components/EditVendor';
+
 
 const App = () => {
 
@@ -33,6 +34,10 @@ const App = () => {
     setVendors(vendors => [...vendors, newVendor])
   }
 
+  // const editVendor = (updatedVendor) => {
+  //   console.log(updatedVendor)
+  // }
+  
   const deleteVendor = (id) => {
     fetch(`http://localhost:9292/vendors/${id}`, {
       method: 'DELETE',
@@ -43,14 +48,15 @@ const App = () => {
     })
   }
 
+
   return (
     <Router>
       <h1>Welcome to Night Market</h1>
       <NavBar />
       <Routes>
         <Route exact path="/vendors/new" element={ <Form addVendor={addVendor} />}/>
+        <Route exact path="vendors/:id/edit" element={ <EditVendor vendors={vendors} />} />
         <Route exact path="/vendors" element={ <Vendors vendors={vendors} deleteVendor={deleteVendor} />} />
-        <Route exact path="vendors/:id/edit" element={ <EditComment />} />
         <Route exact path="/cuisines" element={ <Cuisines cuisines={cuisines} />} />
         <Route exact path="/" element={ <Home />} />
       </Routes>
