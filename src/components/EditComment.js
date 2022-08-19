@@ -1,9 +1,9 @@
 import React from 'react'
 
-const EditCommentForm = () => {
+const EditComment = () => {
   return (
     <div>EditCommentForm</div>
   )
 }
 
-export default EditCommentForm
+export default EditComment

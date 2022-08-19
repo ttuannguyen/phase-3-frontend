@@ -8,6 +8,7 @@ import Vendors from './components/Vendors';
 import Vendor from './components/Vendor';
 import Form from './components/Form';
 import Home from './components/Home';
+import EditComment from './components/EditComment';
 
 const App = () => {
 
@@ -49,6 +50,7 @@ const App = () => {
       <Routes>
         <Route exact path="/vendors/new" element={ <Form addVendor={addVendor} />}/>
         <Route exact path="/vendors" element={ <Vendors vendors={vendors} deleteVendor={deleteVendor} />} />
+        <Route exact path="vendors/:id/edit" element={ <EditComment />} />
         <Route exact path="/cuisines" element={ <Cuisines cuisines={cuisines} />} />
         <Route exact path="/" element={ <Home />} />
       </Routes>
