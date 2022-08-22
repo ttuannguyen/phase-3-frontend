@@ -81,7 +81,7 @@ const App = () => {
         <Route exact path="/vendors/new" element={ <Form addVendor={addVendor} />}/>
         <Route exact path="vendors/:id/edit" element={ <EditVendor vendors={vendors} editVendor={editVendor} />} />
         <Route exact path="/vendors" element={ <Vendors vendors={vendors} deleteVendor={deleteVendor} />} />
-        <Route exact path="/cuisines/new" element={ <CuisineDetails />} />
+        <Route exact path="/cuisines/:id" element={ <CuisineDetails />} />
         <Route exact path="/cuisines" element={ <Cuisines cuisines={cuisines} />} />
         <Route exact path="/" element={ <Home />} />
       </Routes>
