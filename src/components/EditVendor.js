@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-const EditVendor = () => {
+const EditVendor = ({ editVendor }) => {
 
   const [vendor, setVendor] = useState([]);
   const { id } = useParams();
@@ -33,31 +33,38 @@ const EditVendor = () => {
     })
   };
 
-
   // PATCH fetch request 
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('submit')
+    fetch(`http://localhost:9292/vendors/${id}`, {
+      method: 'PATCH',
+      headers: {
+          "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData)
+    })
+    .then(res => res.json())
+    .then(data => editVendor(data))
   }
 
 
   return (
     <div id="form">
-    <h3>Vendor Form</h3>
-    <p>trying to put name here</p>
-    <form onSubmit={handleSubmit}>
-        <label>Vendor Name: </label>
-        <input type="text" name="name" value={formData.name} onChange={handleChange}/><br/>
-        <label>Booth Number: </label>
-        <input type="text" name="booth_number" value={formData.booth_number} onChange={handleChange}/><br/>
-        <label>Cuisine ID: </label>
-        <input type="text" name="cuisine_id" value={formData.cuisine_id} onChange={handleChange}/><br/>
-        <label>Comment: </label>
-        <input type="text" name="comment" value={formData.comment} onChange={handleChange}/><br/>
-        <button type="submit">Edit</button>
-    </form>
-</div>
+      <h3>Vendor Form</h3>
+      <h4>{formData.name}</h4>
+      <form onSubmit={handleSubmit}>
+          <label>Vendor Name: </label>
+          <input type="text" name="name" value={formData.name} onChange={handleChange}/><br/>
+          <label>Booth Number: </label>
+          <input type="text" name="booth_number" value={formData.booth_number} onChange={handleChange}/><br/>
+          <label>Cuisine ID: </label>
+          <input type="number" name="cuisine_id" value={formData.cuisine_id} onChange={handleChange}/><br/>
+          <label>Comment: </label>
+          <input type="text" name="comment" value={formData.comment} onChange={handleChange}/><br/>
+          <button type="submit">Edit</button>
+      </form>
+  </div>
   )
 }
 
