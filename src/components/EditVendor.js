@@ -4,7 +4,6 @@ import { useParams } from 'react-router-dom';
 
 const EditVendor = ({ editVendor }) => {
 
-  const [vendor, setVendor] = useState([]);
   const { id } = useParams();
 
   const [formData, setFormData] = useState({
@@ -19,12 +18,12 @@ const EditVendor = ({ editVendor }) => {
     fetch(`http://localhost:9292/vendors/${id}`)
       .then(res => res.json())
       .then(vendor => {
-        console.log(vendor)
+        // console.log(vendor)
         setFormData(vendor)
       })
   }, [id]);
 
-  console.log(formData)
+  // console.log(formData)
 
   
   const handleChange = (e) => {
@@ -45,7 +44,10 @@ const EditVendor = ({ editVendor }) => {
       body: JSON.stringify(formData)
     })
     .then(res => res.json())
-    .then(data => editVendor(data))
+    .then(data => {
+      // console.log(data)
+      editVendor(data)
+    })
   }
 
 

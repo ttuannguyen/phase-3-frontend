@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Form = ({ addVendor }) => {
+const VendorAddForm = ({ addVendor }) => {
 
     const url = "http://localhost:9292/vendors";
     
@@ -58,4 +58,4 @@ const Form = ({ addVendor }) => {
     )
 }
 
-export default Form
+export default VendorAddForm
