@@ -1,15 +1,52 @@
 import React from 'react'
+import { useState } from 'react';
 
-const CuisineAddForm = () => {
+const CuisineAddForm = ({ addCuisine }) => {
 
+    const url = 'http://localhost:9292/cuisines';
     
+    const [name, setName] = useState('');
+
+    const handleChange = (e) => {
+        setName(e.target.value);
+    };
+
+    // const handleChange = (e) => {
+    //     setFormData(formData => {
+    //         return {...formData, [e.target.name]:e.target.value}
+    //     })
+    // };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        //reset form
+        setName('')
+
+        // need a name object to pass down below
+        const nameObj = {name: name}
+
+        fetch(url, {
+            method: 'POST', 
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(nameObj),
+          })
+          .then(res => res.json())
+          .then(newCuisine => {
+            addCuisine(newCuisine)
+          })
+        // console.log(nameObj)
+    }
+
     
     return (
         <div>
             <h3>Add Cuisine</h3>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <label>Cuisine Name: </label>
-                <input type="text" name="name"/><br/>
+                <input type='text' name='name' value={name} onChange={handleChange} />
+                <button type='submit'>Add</button>
             </form>
         </div>
     )

@@ -5,7 +5,9 @@ const Vendor = ({vendor, cuisine, deleteVendor}) => {
     // console.log(vendor)
     return (
         <div>
-            <h3>{vendor.name}</h3>
+            <Link to={`/vendors/${vendor.id}`} style={{ textDecoration: 'none' }}>
+                <h3>{vendor.name}</h3>
+            </Link>
             <h4>Booth # {vendor.booth_number}</h4>
             <h4>Cuisine ID: {vendor.cuisine_id}</h4>
             <h4>Cuisine: {cuisine.name}</h4>
