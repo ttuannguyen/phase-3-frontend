@@ -1,5 +1,6 @@
 import React from 'react'
 import Vendor from './Vendor'
+import { Link } from 'react-router-dom'
 
 const Vendors = ({ vendors, deleteVendor }) => {
 
@@ -14,6 +15,9 @@ const Vendors = ({ vendors, deleteVendor }) => {
     <div>
         <h2>All Vendors</h2>
         {allVendors}
+        <Link to={"/vendors/new"} style={{ textDecoration: 'none' }}>
+        <h4>Add a Vendor</h4>
+      </Link>
     </div>
   )
 }
