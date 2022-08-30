@@ -7,8 +7,9 @@ const VendorAddForm = ({ addVendor }) => {
     const [formData, setFormData] = useState({
         name:"",
         booth_number:"",
-        cuisine_id:"",
-        comment:"",        
+        // cuisine_id:"",
+        cuisine_name:"",
+        comment:""        
     });
 
     const handleChange = (e) => {
@@ -23,7 +24,8 @@ const VendorAddForm = ({ addVendor }) => {
         setFormData({
             name:"",
             booth_number:"",
-            cuisine_id:"",
+            // cuisine_id:"",
+            cuisine_name:"",
             comment:"",  
         })
 
@@ -45,13 +47,15 @@ const VendorAddForm = ({ addVendor }) => {
             <h3>Vendor Form</h3>
             <form onSubmit={handleSubmit}>
                 <label>Vendor Name: </label>
-                <input type="text" name="name" value={formData.name} onChange={handleChange} /><br/>
+                <input type="text" name="name" value={formData.name} onChange={handleChange} required /><br/>
                 <label>Booth Number: </label>
-                <input type="text" name="booth_number" value={formData.booth_number} onChange={handleChange} /><br/>
-                <label>Cuisine ID: </label>
-                <input type="text" name="cuisine_id" value={formData.cuisine_id} onChange={handleChange} /><br/>
+                <input type="text" name="booth_number" value={formData.booth_number} onChange={handleChange} required /><br/>
+                {/* <label>Cuisine ID: </label>
+                <input type="text" name="cuisine_id" value={formData.cuisine_id} onChange={handleChange} required /><br/> */}
+                <label>Cuisine Name: </label>
+                <input type="text" name="cuisine_name" value={formData.cuisine_name} onChange={handleChange} required /><br/>
                 <label>Comment: </label>
-                <input type="text" name="comment" value={formData.comment} onChange={handleChange} /><br/>
+                <textarea type="text" name="comment" value={formData.comment} onChange={handleChange} required /><br/>
                 <button type="submit">Add Vendor</button>
             </form>
         </div>

@@ -29,7 +29,7 @@ const CuisineDetails = () => {
 
     const allVendors = cuisine.vendors.map(vendor => {
       return (
-        <Link to={`/vendors/${vendor.id}/edit`} key={vendor.id} style={{ textDecoration: 'none' }}>
+        <Link to={`/vendors/${vendor.id}`} key={vendor.id} style={{ textDecoration: 'none' }}>
           <p>{vendor.name}</p>
         </Link>
       )
