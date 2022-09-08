@@ -50,7 +50,7 @@ const CuisineAddForm = ({ addCuisine }) => {
             <h3>Add Cuisine</h3>
             <form onSubmit={handleSubmit}>
                 <label>Cuisine Name: </label>
-                <input type='text' name='name' value={name} onChange={handleChange} />
+                <input type='text' name='name' value={name} onChange={handleChange} required />
                 <button type='submit'>Add</button>
             </form>
         </div>

@@ -1,9 +1,14 @@
-# APP'S NAME
-This is a front-end application for X. 
+# Night Market
 
-# Getting Started with Create React App
+## Description
+I built a food vendor tracking app after having visited Queens Night Market in NYC several times. This is a vendor tracking app in which a user can add a new vendor or cuisine via a form. There is a home page with a navigation bar. On the show page for the vendors, the user can delete or update the information of the vendor by clicking the delete or update button. On the show page of the cuisines, the user can add a new cuisine or click on a specific cuisine to see the list of vendors associated with the cuisine. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Installation
+1. Go to the repo in Github, fork and clone it 
+2. Cd into the project folder and run yarn install 
+3. Run the server on port 3001 with command: json-server --watch db.json --port 3001
+4. Run the React server with yarn start 
+
 
 ## Available Scripts
 
@@ -11,7 +16,7 @@ In the project directory, you can run:
 
 ### `yarn start`
 
-Runs the app in the development mode.\
+Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
@@ -71,3 +76,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
