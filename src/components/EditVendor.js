@@ -19,12 +19,11 @@ const EditVendor = ({ editVendor }) => {
     fetch(`http://localhost:9292/vendors/${id}`)
       .then(res => res.json())
       .then(vendor => {
-        // console.log(vendor)
         setFormData(vendor)
       })
   }, [id]);
 
-  // console.log(formData)
+
 
   
   const handleChange = (e) => {
@@ -34,7 +33,6 @@ const EditVendor = ({ editVendor }) => {
   };
 
   // PATCH fetch request 
-
   const handleSubmit = (e) => {
     e.preventDefault();
     fetch(`http://localhost:9292/vendors/${id}`, {
@@ -46,7 +44,6 @@ const EditVendor = ({ editVendor }) => {
     })
     .then(res => res.json())
     .then(data => {
-      // console.log(data)
       editVendor(data)
     })
     navigate('/vendors');

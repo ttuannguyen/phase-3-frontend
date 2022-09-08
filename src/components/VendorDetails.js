@@ -15,8 +15,6 @@ const VendorDetails = () => {
         .then(data => setVendor(data))
     }, [id]);
 
-    // console.log(vendor.cuisine)
-
 
     return (
         <div className='vendor-detail'>

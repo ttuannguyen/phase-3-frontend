@@ -33,13 +33,11 @@ const App = () => {
 
 
   const addCuisine = (newCuisine) => {
-    // console.log(newCuisine)
     setCuisines(cuisines => [...cuisines, newCuisine])
   }
 
   
   const addVendor = (newVendor) => {
-    // console.log(newVendor)
     setVendors(vendors => [...vendors, newVendor])
   }
 

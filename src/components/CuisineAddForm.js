@@ -14,18 +14,11 @@ const CuisineAddForm = ({ addCuisine }) => {
         setName(e.target.value);
     };
 
-    // const handleChange = (e) => {
-    //     setFormData(formData => {
-    //         return {...formData, [e.target.name]:e.target.value}
-    //     })
-    // };
-
     const handleSubmit = (e) => {
         e.preventDefault();
         //reset form
         setName('')
 
-        // need a name object to pass down below
         const nameObj = {name: name}
 
         fetch(url, {

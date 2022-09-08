@@ -15,18 +15,6 @@ const CuisineDetails = () => {
         .then(data => setCuisine(data))
     }, [id]);
 
-    // const allVendors = cuisine.vendors.map(vendor => <Vendor vendor={vendor} key={vendor.id} cuisine={vendor.cuisine} />)
-
-    // console.log(cuisine.vendors)
-
-    // const allVendors = cuisine.vendors.map(vendor => {
-    //     return (
-    //         <li key={vendor.id}>{vendor.name}</li>
-    //     )
-    // })
-
-    // const allVendors = cuisine.vendors.map(vendor => <VendorLink vendor={vendor} key={vendor.id} />)
-
     const allVendors = cuisine.vendors.map(vendor => {
       return (
         <Link to={`/vendors/${vendor.id}`} key={vendor.id} style={{ textDecoration: 'none' }}>

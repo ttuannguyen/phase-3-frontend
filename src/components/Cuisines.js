@@ -26,7 +26,7 @@ const Cuisines = ( {cuisines }) => {
       <h2>All Cuisines</h2>
       {allCuisines}
       <Link to={"/cuisines/new"} style={{ textDecoration: 'none' }}>
-        <h4>Add a Cuisine</h4>
+        <button>Add a Cuisine</button>
       </Link>
   </div>
 )

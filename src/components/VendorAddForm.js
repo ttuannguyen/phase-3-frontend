@@ -56,8 +56,6 @@ const VendorAddForm = ({ addVendor }) => {
                 <input type="text" name="name" value={formData.name} onChange={handleChange} required /><br/>
                 <label>Booth Number: </label>
                 <input type="text" name="booth_number" value={formData.booth_number} onChange={handleChange} required /><br/>
-                {/* <label>Cuisine ID: </label>
-                <input type="text" name="cuisine_id" value={formData.cuisine_id} onChange={handleChange} required /><br/> */}
                 <label>Cuisine Name: </label>
                 <input type="text" name="cuisine_name" value={formData.cuisine_name} onChange={handleChange} required /><br/>
                 <label>Comment: </label>

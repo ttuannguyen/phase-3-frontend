@@ -11,6 +11,5 @@ const NavBar = () => {
   )
 }
 
-// style={{ marginRight: "20px", textDecoration: 'none' }}
 
 export default NavBar

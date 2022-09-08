@@ -2,9 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Vendor = ({vendor, cuisine, deleteVendor}) => {
-    // console.log(vendor)
+
     return (
-        <div>
+        <div className='vendor-card'>
             <Link to={`/vendors/${vendor.id}`} style={{ textDecoration: 'none' }}>
                 <h3>{vendor.name}</h3>
             </Link>
