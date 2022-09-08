@@ -1,7 +1,7 @@
 # Night Market
 
 ## Description
-I built a food vendor tracking app after having visited Queens Night Market in NYC several times. This is a vendor tracking app in which a user can add a new vendor or cuisine via a form. There is a home page with a navigation bar. On the show page for the vendors, the user can delete or update the information of the vendor by clicking the delete or update button. On the show page of the cuisines, the user can add a new cuisine or click on a specific cuisine to see the list of vendors associated with the cuisine. 
+I built a food vendor tracking app after having visited Queens Night Market in NYC several times. With this app, a user can add a new vendor or cuisine via a form. There is a home page with a navigation bar. On the show page for the vendors, the user can delete or update the information of the vendor by clicking the delete or update button. On the show page of the cuisines, the user can add a new cuisine or click on a specific cuisine to see the list of vendors associated with the cuisine. 
 
 ## Installation
 1. Go to the repo in Github, fork and clone it 

@@ -1,10 +1,11 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 const EditVendor = ({ editVendor }) => {
 
   const { id } = useParams();
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     name:"",
@@ -48,6 +49,7 @@ const EditVendor = ({ editVendor }) => {
       // console.log(data)
       editVendor(data)
     })
+    navigate('/vendors');
   }
 
 
