@@ -1,4 +1,8 @@
-.App {
+h1 {
   text-align: center;
+  color: white;
+  background-color: midnightblue;
+  margin: auto;
+  padding: 3vh 6vw;
 }
 

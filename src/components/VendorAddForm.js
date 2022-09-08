@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const VendorAddForm = ({ addVendor }) => {
 
@@ -11,6 +12,8 @@ const VendorAddForm = ({ addVendor }) => {
         cuisine_name:"",
         comment:""        
     });
+
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
         setFormData(formData => {
@@ -40,6 +43,9 @@ const VendorAddForm = ({ addVendor }) => {
           .then(newVendor => {
             addVendor(newVendor)
           })
+        
+        navigate('/vendors');
+        
     }
 
     return (

@@ -70,7 +70,7 @@ const App = () => {
 
   return (
     <Router>
-      <h1>Welcome to Night Market</h1>
+      <h1>Night Market</h1>
       <NavBar />
       <Routes>
         <Route exact path="/vendors/:id" element={ <VendorDetails />} />

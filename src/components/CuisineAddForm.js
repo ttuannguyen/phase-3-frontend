@@ -1,11 +1,14 @@
-import React from 'react'
+import React from 'react';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const CuisineAddForm = ({ addCuisine }) => {
 
     const url = 'http://localhost:9292/cuisines';
     
     const [name, setName] = useState('');
+
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
         setName(e.target.value);
@@ -37,6 +40,8 @@ const CuisineAddForm = ({ addCuisine }) => {
             addCuisine(newCuisine)
           })
         // console.log(nameObj)
+
+        navigate('/cuisines');
     }
 
     
