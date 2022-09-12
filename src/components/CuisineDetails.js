@@ -5,7 +5,7 @@ import { useParams, Link } from 'react-router-dom';
 const CuisineDetails = () => {
 
     const [cuisine, setCuisine] = useState({
-        vendors: []
+      vendors: []
     });
     const { id } = useParams();
   
@@ -14,7 +14,8 @@ const CuisineDetails = () => {
         .then(res => res.json())
         .then(data => setCuisine(data))
     }, [id]);
-
+    
+    
     const allVendors = cuisine.vendors.map(vendor => {
       return (
         <Link to={`/vendors/${vendor.id}`} key={vendor.id} style={{ textDecoration: 'none' }}>
@@ -22,7 +23,6 @@ const CuisineDetails = () => {
         </Link>
       )
     })
-
 
     return (
         <div className='cuisine-detail'>

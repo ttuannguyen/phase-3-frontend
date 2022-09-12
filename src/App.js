@@ -71,13 +71,13 @@ const App = () => {
       <h1>Night Market</h1>
       <NavBar />
       <Routes>
-        <Route exact path="/vendors/:id" element={ <VendorDetails />} />
-        <Route exact path="vendors/:id/edit" element={ <EditVendor vendors={vendors} editVendor={editVendor} />} />
         <Route exact path="/vendors/new" element={ <VendorAddForm addVendor={addVendor} />}/>
         <Route exact path="/vendors" element={ <Vendors vendors={vendors} deleteVendor={deleteVendor} />} />
-        <Route exact path="/cuisines/:id" element={ <CuisineDetails />} />
+        <Route path="vendors/:id/edit" element={ <EditVendor vendors={vendors} editVendor={editVendor} />} />
+        <Route path="/vendors/:id" element={ <VendorDetails />} />
         <Route exact path="cuisines/new" element={ <CuisineAddForm addCuisine={addCuisine} />} />
         <Route exact path="/cuisines" element={ <Cuisines cuisines={cuisines} />} />
+        <Route path="/cuisines/:id" element={ <CuisineDetails cuisines={cuisines} />} />
         <Route exact path="/" element={ <Home />} />
       </Routes>
     </Router>
